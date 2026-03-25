@@ -233,6 +233,7 @@ export default function HeroScene1() {
       `}</style>
 
             <section
+                data-scene-id="hero"
                 className="rayo-grain rayo-vignette"
                 style={{
                     position: "relative",
@@ -247,7 +248,7 @@ export default function HeroScene1() {
                     paddingRight: "clamp(24px, 5vw, 72px)",
                 }}
             >
-                <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+                <div data-hero-product style={{ position: "absolute", inset: 0, zIndex: 0 }}>
                     {SLIDES.map((slide, i) => (
                         <img
                             key={slide.src}
@@ -290,6 +291,7 @@ export default function HeroScene1() {
                     <div style={{ overflow: "hidden" }}>
                         <h1
                             className="anim-title"
+                            data-reveal="headline"
                             style={{
                                 fontFamily: "var(--font-bebas), sans-serif",
                                 fontSize: "clamp(52px, 9vw, 120px)",

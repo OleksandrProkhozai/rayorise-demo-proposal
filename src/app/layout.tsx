@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Playfair_Display, DM_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
-import Hero from "@/components/Hero";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -44,11 +44,10 @@ export default function RootLayout({
       className={`${bebasNeue.variable} ${playfair.variable} ${dmSans.variable} ${spaceMono.variable}`}
     >
       <body className="bg-rayo-black text-rayo-off-white antialiased">
-        <Header />
-        
-        <main>
-          {children}
-        </main>
+        <SmoothScroll>
+          <Header />
+          <main>{children}</main>
+        </SmoothScroll>
       </body>
     </html>
   );
