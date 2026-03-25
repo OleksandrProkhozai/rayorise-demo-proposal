@@ -1,15 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bebas_Neue, Playfair_Display, DM_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Hero from "@/components/Hero";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bebasNeue = Bebas_Neue({
+  weight: "400",
   subsets: ["latin"],
+  variable: "--font-bebas",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
+  style: "italic",
   subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
+const dmSans = DM_Sans({
+  weight: ["300", "400"],
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+});
+
+const spaceMono = Space_Mono({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-space-mono",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +41,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${bebasNeue.variable} ${playfair.variable} ${dmSans.variable} ${spaceMono.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="bg-rayo-black text-rayo-off-white antialiased">
+        <Header />
+        
+        <main>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
