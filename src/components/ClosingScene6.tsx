@@ -87,10 +87,10 @@ export default function Scene6ClosingFrame() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-16">
-                    <button className="font-bebas text-lg tracking-widest px-10 py-4 transition-shadow duration-300 bg-rayo-amber text-rayo-black rounded-none hover:shadow-[0_0_20px_rgba(184,132,31,0.4)]">
+                    <button className="font-bebas text-lg tracking-widest px-10 py-4 rounded-none bg-rayo-amber text-rayo-black cursor-pointer transform-gpu transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_0_24px_rgba(184,132,31,0.45)] active:translate-y-0 active:scale-[0.99]">
                         START YOUR ORDER
                     </button>
-                    <button className="font-bebas text-lg tracking-widest px-10 py-4 transition-colors duration-300 hover:bg-rayo-red/25 border border-rayo-amber/70 text-rayo-off-white rounded-none">
+                    <button className="font-bebas text-lg tracking-widest px-10 py-4 rounded-none border border-rayo-amber/70 text-rayo-off-white cursor-pointer transform-gpu transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-rayo-amber hover:bg-rayo-red/25 hover:shadow-[0_0_18px_rgba(184,132,31,0.22)] active:translate-y-0 active:scale-[0.99]">
                         CONTACT US
                     </button>
                 </div>

@@ -44,8 +44,8 @@ export default function RootLayout({
       className={`${bebasNeue.variable} ${playfair.variable} ${dmSans.variable} ${spaceMono.variable}`}
     >
       <body className="bg-rayo-black text-rayo-off-white antialiased">
+        <Header />
         <SmoothScroll>
-          <Header />
           <main>{children}</main>
         </SmoothScroll>
       </body>

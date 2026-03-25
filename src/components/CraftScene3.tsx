@@ -1,4 +1,5 @@
 const pills = ["ISO 9001 CERTIFIED", "GMP CERTIFIED", "5+ YEARS EXPERIENCE"];
+const JACKET_SRC = "https://pngimg.com/d/jacket_PNG8048.png";
 
 export default function CraftScene3() {
     return (
@@ -188,19 +189,47 @@ export default function CraftScene3() {
                                 boxShadow: "0 16px 48px rgba(26,20,16,0.22)",
                                 zIndex: 20,
                                 overflow: "hidden",
+                                background:
+                                    "linear-gradient(155deg, #F7F2E8 0%, #EFE8D9 54%, #E6DCC8 100%)",
                             }}
                         >
-                            <img
-                                src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=700&q=80"
-                                alt="Vintage apparel stitching detail"
+                            <div
+                                data-shared-jacket-target-wrap
                                 style={{
-                                    width: "100%",
-                                    height: "110%",
-                                    objectFit: "cover",
-                                    objectPosition: "center top",
-                                    filter: "grayscale(40%)",
-                                    display: "block",
-                                    marginTop: "-5%",
+                                    position: "absolute",
+                                    left: "50%",
+                                    top: "50%",
+                                    width: "58%",
+                                    transform: "translate(-50%, -50%)",
+                                    zIndex: 30,
+                                    opacity: 0,
+                                    pointerEvents: "none",
+                                }}
+                            >
+                                <img
+                                    data-shared-jacket-target
+                                    src={JACKET_SRC}
+                                    alt="Vintage jacket settled into the craft scene"
+                                    style={{
+                                        width: "100%",
+                                        height: "auto",
+                                        display: "block",
+                                        mixBlendMode: "multiply",
+                                        filter: "contrast(1.08) saturate(0.92)",
+                                        transform: "rotate(-7deg)",
+                                        transformOrigin: "center center",
+                                    }}
+                                />
+                            </div>
+
+                            <div
+                                aria-hidden
+                                style={{
+                                    position: "absolute",
+                                    inset: 0,
+                                    background:
+                                        "radial-gradient(120% 80% at 50% 20%, rgba(255,255,255,0.35) 0%, rgba(237,227,208,0) 65%)",
+                                    pointerEvents: "none",
                                 }}
                             />
                         </div>
